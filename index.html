@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="./index.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/blotter.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/channelSplitMaterial.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/fliesMaterial.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/liquidDistortMaterial.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/rollingDistortMaterial.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/slidingDoorMaterial.min.js"></script> -->
+</head>
+
+<body>
+    <!-- Script for split material -->
+    <script>
+        var text = new Blotter.Text("JavaScript", {
+            family: "Montserrat",
+            size: 300,
+            fill: "#000",
+            paddingLeft: 80,
+            paddingRight: 80,
+            paddingTop: 80,
+            paddingbottom: 80
+        })
+    </script>
+
+    <!-- <script>
+        // channel split material
+        var splitMaterial = new Blotter.ChannelSplitMaterial();
+
+        var splitBlotter = new Blotter(splitMaterial, {
+            texts: text
+        })
+
+        var splitScope = splitBlotter.forText(text);
+
+        splitScope.appendTo(document.body);
+
+    </script> -->
+
+
+    
+    <script>
+        // flies material
+        var chanelSplitMaterial = new Blotter.FliesMaterial();
+        chanelSplitMaterial.uniforms.uPointCellWidth.value = 0.01;
+        chanelSplitMaterial.uniforms.uPointRadius.value = 0.5;
+        chanelSplitMaterial.uniforms.uSpeed.value = 2;
+
+        var fliesBlotter = new Blotter(chanelSplitMaterial, {
+            texts: text
+        })
+
+        var fliesScope = fliesBlotter.forText(text);
+
+        fliesScope.appendTo(document.body);
+    </script>
+
+
+    <!-- <script>
+        // liquid distort material
+        var material = new Blotter.LiquidDistortMaterial();
+        material.uniforms.uSpeed.value = 2;
+
+        var liquidBlotter = new Blotter(material, {
+            texts: text
+        })
+
+        var fliesScope = liquidBlotter.forText(text);
+
+        fliesScope.appendTo(document.body);
+    </script> -->
+
+    <!-- <script>
+        // rolling distort material
+        var rollingDistortMaterial = new Blotter.RollingDistortMaterial();
+
+        var rollingBlotter = new Blotter(rollingDistortMaterial, {
+            texts: text
+        })
+
+        var rollingScope = rollingBlotter.forText(text);
+
+        rollingScope.appendTo(document.body);
+    </script> -->
+
+    <!-- <script>
+        // rolling distort material
+        var slidingDoorMaterial = new Blotter.SlidingDoorMaterial();
+
+        var slidingBlotter = new Blotter(slidingDoorMaterial, {
+            texts: text
+        })
+
+        var slidingScope = slidingBlotter.forText(text);
+
+        rollingScope.appendTo(document.body);
+    </script> -->
+</body>
+
+
+
+</html>
